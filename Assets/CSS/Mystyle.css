@@ -1,4 +1,6 @@
 /* Mystyle.css */
+
+/* Body styles */
 body {
     font-family: 'Josefin Sans', sans-serif;
     background-color: #f0f0f0; /* Light grey background */
@@ -11,23 +13,155 @@ body {
     margin: 0;
 }
 
-
+/* Heading 1 */
 h1 {
-    color: #1E90FF;
+    color: #1E90FF; /* Blue color */
+    font-size: 36px; /* Larger font size */
+    text-align: center; /* Centered text */
+    text-transform: uppercase; /* Make the text uppercase */
+    text-decoration: underline; /* Underline text */
+    letter-spacing: 2px; /* Add some space between letters */
+    margin-bottom: 20px; /* Space below the heading */
 }
 
+/* Heading 2 */
 h2 {
-    color: #32CD32;
+    color: #32CD32; /* Green color */
+    font-size: 28px; /* Medium size */
+    text-align: left; /* Align text to the left */
+    font-weight: bold; /* Make the text bold */
+    text-transform: capitalize; /* Capitalize the first letter of each word */
+    margin-bottom: 15px; /* Space below the heading */
 }
 
+/* Paragraph styles */
 p {
-    font-size: 16px;
+    font-size: 18px; /* Slightly larger font size */
+    color: #555; /* Dark grey color */
+    text-align: justify; /* Justify the text */
+    line-height: 1.8; /* Increase line height for better readability */
+    margin: 15px 0; /* Space above and below the paragraph */
 }
 
+/* Link styles */
 a {
-    color: #FF6347;
+    color: #FF6347; /* Tomato red color */
+    text-decoration: none; /* Remove underline */
+    font-size: 18px; /* Larger font size for links */
 }
 
 a:hover {
-    color: #FF4500;
+    color: #FF4500; /* Darker red color when hovering */
+    text-decoration: underline; /* Underline when hovering */
+}
+
+/* Button-like links */
+a.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FF6347; /* Tomato red background */
+    color: white; /* White text */
+    border-radius: 5px; /* Rounded corners */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Bold text */
+    transition: background-color 0.3s ease; /* Smooth background color change */
+}
+
+a.button:hover {
+    background-color: #FF4500; /* Darker background on hover */
+}
+
+/* Horizontal line styles */
+hr {
+    border: none;
+    border-top: 2px solid #1E90FF; /* Blue horizontal line */
+    width: 80%;
+    margin: 30px auto; /* Center the line and add space above and below */
+}
+
+/* Small text (footer or small notes) */
+small {
+    font-size: 14px; /* Smaller font size */
+    color: #888; /* Light grey color */
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Transformations */
+h1:hover {
+    transform: scale(1.1); /* Enlarge the heading on hover */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+h2:hover {
+    transform: rotate(5deg); /* Slightly rotate the heading on hover */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+/* Floating text effect */
+.floating-text {
+    position: relative;
+    font-size: 24px; /* Large font size */
+    color: #FF6347; /* Tomato red */
+    animation: float 2s ease-in-out infinite; /* Animation to create a floating effect */
+}
+
+@keyframes float {
+    0% {
+        top: 0;
+    }
+    50% {
+        top: -10px;
+    }
+    100% {
+        top: 0;
+    }
+}
+
+/* Styling for containers */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Flexbox for layout */
+.flex-container {
+    display: flex;
+    justify-content: space-around; /* Space between items */
+    align-items: center; /* Vertically align items */
+    margin: 30px 0;
+}
+
+.flex-container > div {
+    flex: 1; /* Make each item take equal width */
+    margin: 10px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    body {
+        background-image: none; /* Remove background image for smaller screens */
+    }
+
+    h1, h2 {
+        font-size: 24px; /* Smaller font size for headings */
+    }
+
+    p {
+        font-size: 16px; /* Smaller font size for paragraphs */
+    }
+
+    .container {
+        width: 90%; /* Make container width smaller on smaller screens */
+    }
+
+    .flex-container {
+        flex-direction: column; /* Stack items vertically */
+    }
 }
