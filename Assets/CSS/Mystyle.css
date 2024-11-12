@@ -173,6 +173,6 @@ h2:hover {
     }
 
     img {
-        max-width: 50%;  /* Ensures the image doesn't exceed container width */
+        max-width: 300px;  /* Ensures the image doesn't exceed container width */
         height: auto;     /* Keeps image's aspect ratio */
     }
