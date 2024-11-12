@@ -159,18 +159,16 @@ h2:hover {
     .container {
         width: 90%; /* Make container width smaller on smaller screens */
     }
-
-
-
-
-    .flex-container {
-        display: flex;
-         justify-content: center;  /* Center horizontally */
-        align-items: center;      /* Center vertically */
-        height: 100vh;            /* Take up full viewport height */
+    .centered-image {
+        display: block;       /* Ensure the image is a block-level element */
+        margin-left: auto;    /* Center horizontally */
+        margin-right: auto;   /* Center horizontally */
+        width: 50%;           /* Resize the image to 50% of its original size (adjust as needed) */
+        height: auto;         /* Maintain aspect ratio */
     }
 
-    img {
-        max-width: 300px;  /* Ensures the image doesn't exceed container width */
-        height: auto;     /* Keeps image's aspect ratio */
-    }
+
+
+
+
+  
