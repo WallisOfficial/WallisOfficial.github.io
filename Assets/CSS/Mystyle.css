@@ -160,9 +160,7 @@ h2:hover {
         width: 90%; /* Make container width smaller on smaller screens */
     }
 
-    .flex-container {
-        flex-direction: column; /* Stack items vertically */
-    }
+
 
 
     .flex-container {
