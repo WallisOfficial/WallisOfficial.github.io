@@ -3,7 +3,7 @@
 /* Body styles */
 body {
     font-family: 'Josefin Sans', sans-serif;
-    background-image: url('https://pub-static.fotor.com/assets/bg/e9f1764c-0bdc-496a-be56-2aef89924b4b.jpg');
+    background-color: #f0f0f0; /* Light grey background */
     background-size: cover; /* Make sure the background image covers the whole page */
     background-position: center; /* Position the background image in the center */
     color: #333; /* Default text color */
