@@ -3,7 +3,7 @@
 /* Body styles */
 body {
     font-family: 'Josefin Sans', sans-serif;
-    background-image: url('IMG/bg.jpg'); /* Background image */
+    background-image: url('Assets/IMG/bg.jpg'); /* Background image */
     background-size: cover; /* Make sure the background image covers the whole page */
     background-position: center; /* Position the background image in the center */
     color: #333; /* Default text color */
