@@ -111,7 +111,7 @@ h2:hover {
         display: block;       /* Ensure the image is a block-level element */
         margin-left: auto;    /* Center horizontally */
         margin-right: auto;   /* Center horizontally */
-        width: 50%;           /* Resize the image to 50% of its original size (adjust as needed) */
+        width: 25%;           /* Resize the image to 50% of its original size (adjust as needed) */
         height: auto;         /* Maintain aspect ratio */
 }
 
