@@ -164,4 +164,16 @@ h2:hover {
     .flex-container {
         flex-direction: column; /* Stack items vertically */
     }
-}
+
+
+    .flex-container {
+        display: flex;
+         justify-content: center;  /* Center horizontally */
+        align-items: center;      /* Center vertically */
+        height: 100vh;            /* Take up full viewport height */
+    }
+
+    img {
+        max-width: 100%;  /* Ensures the image doesn't exceed container width */
+        height: auto;     /* Keeps image's aspect ratio */
+    }
