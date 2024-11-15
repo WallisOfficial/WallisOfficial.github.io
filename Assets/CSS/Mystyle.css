@@ -3,7 +3,7 @@
 /* Body styles */
 body {
     font-family: 'Josefin Sans', sans-serif;
-    background-image: url('https://png.pngtree.com/background/20230616/original/pngtree-faceted-abstract-background-in-3d-with-shimmering-iridescent-metallic-texture-of-picture-image_3653595.jpg');
+    background-color: #fff;
     background-size: cover; /* Make sure the background image covers the whole page */
     background-position: center; /* Position the background image in the center */
     color: #333; /* Default text color */
