@@ -4,15 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal CV</title>
+    <title>Wallis Li</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100..700&family=Tiny5&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
         rel="stylesheet">
     <style>
         /* General Styling */
         body {
-            font-family: 'Josefin Sans', sans-serif;
+            font-family: "Karla", sans-serif;
             margin: 0;
             padding: 0;
             background-color: #fff;
@@ -24,6 +24,7 @@
             text-align: center;
         }
 
+
         nav {
             overflow: hidden;
             text-align: center;
@@ -31,16 +32,72 @@
 
         nav a {
             display: inline-block;
-            color: #2c3e50;
+            color: #888;
             padding: 14px 20px;
             text-decoration: none;
             margin: 0 10px;
         }
 
+        nav a.active {
+            font-weight: bold;
+            color: #333;
+            /* 当前页面文字颜色 */
+            border-bottom: 3px solid #C8F136;
+            /* 可选的底部高亮效果 */
+        }
+
         nav a:hover {
-            background: #2980b9;
+            color: #C8F136;
             transition: 0.3s;
         }
+
+        .introduction {
+            text-align: center;
+            /* 居中对齐 */
+            margin-top: 50px;
+            /* 添加顶部间距 */
+        }
+
+        .introduction h1 {
+            font-size: 4.5em;
+            /* 主标题字体大小 */
+            font-weight: bold;
+            /* 字体粗细 */
+            color: #333;
+            /* 主文字颜色 */
+            line-height: 1.5;
+            /* 行高 */
+        }
+
+        .floating-text {
+            display: inline-block;
+            /* 保证单独定位 */
+            position: relative;
+            /* 相对于父容器定位 */
+            color: #C8F136;
+            /* 替换颜色 */
+            animation: float 3s infinite ease-in-out;
+            /* 动画 */
+        }
+
+        /* 定义浮动动画 */
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+                /* 初始位置 */
+            }
+
+            50% {
+                transform: translateY(-10px);
+                /* 上升 */
+            }
+
+            100% {
+                transform: translateY(0);
+                /* 回到初始位置 */
+            }
+        }
+
 
         .container {
             width: 80%;
@@ -48,24 +105,24 @@
             padding: 20px;
             background-color: rgba(255, 255, 255, 0.8);
             /* Semi-transparent white */
-            border-radius: 10px;
+            border-radius: 20px;
             /* Rounded corners */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             /* Subtle shadow */
         }
 
         h1 {
-            font-family: 'Tiny5', sans-serif;
-            color: #2c3e50;
+            color: #333;
             font-size: 70px;
         }
 
         h2 {
-            color: #2c3e50;
+            color: #333;
+            padding-left: 20px;
         }
 
         p {
-            color: #2c3e50;
+            color: #333;
         }
 
         section {
@@ -89,18 +146,14 @@
             background-color: #fff;
             padding: 15px;
             margin: 10px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
+            border-radius: 10px;
             text-align: center;
-            width: 150px;
+            width: 330px;
             display: inline-block;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
         }
 
-
-
         .contact-card a {
-            color: #2980b9;
             text-decoration: none;
             font-weight: bold;
         }
@@ -108,43 +161,92 @@
         /* About Me Section */
         .about-section {
             display: flex;
+            /* 使用 flex 布局 */
             align-items: center;
+            /* 让图片和文字垂直居中对齐 */
+            justify-content: flex-start;
+            /* 图片和文字保持左对齐 */
+            flex-wrap: nowrap;
+            /* 防止换行 */
+            gap: 60px;
+            /* 图片和文字之间的间距 */
+            max-width: 100%;
+            /* 保证内容不会超出容器 */
+            padding-top: 30px;
+            padding-right: 50px;
+            padding-left: 10px;
         }
 
         .about-section .image-placeholder {
-            width: 200px;
-            height: 200px;
-            background: #bdc3c7;
-            margin-right: 20px;
+            width: 240px;
+            height: 240px;
+            background-image: url('Assets/IMG/kitty.png');
+            /* 替换为实际图片路径 */
+            background-size: cover;
+            /* 保证图片完整填充 */
+            background-position: center;
+            /* 居中对齐图片 */
+            background-repeat: no-repeat;
+            /* 禁止重复图片 */
             border-radius: 50%;
+            /* 圆形图片 */
+            flex-shrink: 0;
+            /* 防止图片被压缩 */
         }
+
+        .about-section p {
+            flex: 1;
+            /* 让文字占据剩余空间 */
+            margin: 0;
+            /* 去除默认外边距 */
+            line-height: 2;
+            /* 调整行间距，让文字更易阅读 */
+
+        }
+
+
 
         /* Skills Section */
-        .progress-container {
+
+        /* 外部容器：左右布局 */
+        .skills-container {
             display: flex;
-            align-items: center;
-            /* 垂直居中对齐 */
-            justify-content: start;
-            /* 让文字和进度条保持靠左 */
-            margin-bottom: 15px;
-            /* 添加进度条之间的间距 */
+            /* 使用 flexbox */
+            justify-content: space-between;
+            /* 左右分开 */
+            gap: 20px;
+            /* 左右间距 */
         }
 
+        /* 左右内容样式 */
+        .skills-left,
+        .skills-right {
+            flex: 1;
+            /* 两边等宽 */
+        }
+
+        /* 技能标题样式 */
+        .skill h4 {
+            padding-top: 5px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            padding-left: 20px;
+        }
+
+        /* 进度条容器样式 */
         .progress-bar {
             background-color: #e0e0e0;
-            border-radius: 4px;
-            height: 20px;
-            width: 40%;
-            position: absolute;
-            /* 使用绝对定位 */
-            right: 450px;
-            /* 设置距离右侧的固定间距 */
+            border-radius: 8px;
+            height: 8px;
+            width: 80%;
+            margin-left: 20px;
         }
 
+        /* 进度条填充样式 */
         .progress {
-            background-color: #2980b9;
+            background-color: #C8F136;
             height: 100%;
-            border-radius: 4px;
+            border-radius: 8px;
         }
 
 
@@ -152,143 +254,266 @@
         .education-card {
             background-color: #fff;
             padding: 15px;
-            margin: 10px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            text-align: center;
-            width: 250px;
-            display: inline-block;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 10px 0;
+            /* 简化上下 margin */
+            border-radius: 10px;
+            text-align: left;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
         }
+
+        .education-header {
+            display: flex;
+            /* 使用 Flexbox */
+            justify-content: space-between;
+            /* 左右对齐 */
+            align-items: center;
+            /* 垂直居中 */
+        }
+
+        .details {
+            font-size: 16px;
+            color: #333;
+            text-align: right;
+        }
+
+        .education-card h3 {
+            padding-left: 10px;
+        }
+
+        .education-card p {
+            font-size: 16px;
+            color: #888;
+            padding-right: 10px;
+        }
+
 
         /* Work Experience Section */
         .work-experience-container {
             display: flex;
             overflow-x: scroll;
             gap: 20px;
-            padding-bottom: 10px;
+            padding-top: 10px;
+            padding-bottom: 20px;
+            padding-left: 10px;
+            padding-right: 10px;
         }
 
         .work-experience-card {
             background-color: #fff;
             padding: 30px;
-            width: 300px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            border-radius: 10px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
             flex-shrink: 0;
+        }
+
+        .texts {
+            font-size: 16px;
+            color: #333;
+            text-align: right;
         }
 
         .work-experience-card h3 {
             margin-top: 0;
+            margin-bottom: 0;
         }
 
         .work-experience-card p {
             font-size: 16px;
-            color: #7f8c8d;
+            color: #888;
+            margin-top: 5px;
+            margin-bottom: 5px;
         }
     </style>
 </head>
 
 <body>
-
+    <br>
     <div class="container">
-
-        <header>
-            <h1>WallIS LI</h1>
-            <p>UX DESIGNER</p>
-        </header>
         <nav>
-            <a href="index.html">HOME</a>
+            <a href="index1.html" class="active">HOME</a>
             <a href="projects.html">PROJECTS</a>
         </nav>
 
+        <header>
+            <br><br>
+            <section class="introduction">
+                <h1>
+                    Hi, I'm Wallis, a 
+                    <span class="floating-text">UX Designer</span>
+                    based in Montreal, Canada
+                </h1>
+            </section>            
+            
+        </header>
+
+        <br>
+
+
         <!-- Contact Section -->
         <section id="contact">
-            <h2>Contact Information</h2>
-            <div class="contact-card">Email: wallisli@example.com</div>
-            <div class="contact-card">Phone: +123 456 7890</div>
-            <div class="contact-card">LinkedIn: <a href="https://linkedin.com/in/wallisli" target="_blank">Profile</a>
+            <h2>Contact Info</h2>
+            <div class="contact-card">Email: lyx.wallis@gmail.com</div>
+            <div class="contact-card">Phone: 438-529-2870</div>
+            <div class="contact-card">LinkedIn: <a href="https://linkedin.com/in/yixuan-li-3725b4232"
+                    target="_blank">Profile</a>
             </div>
         </section>
+
+        <br><br>
 
         <!-- About Me Section -->
         <section id="about">
             <h2>About Me</h2>
             <div class="about-section">
-                <div class="image-placeholder">Image</div>
-                <p>Brief introduction of WallIS Li's background and professional journey.</p>
+                <div class="image-placeholder"></div>
+                <p>
+                    I am a current graduate student with a strong passion for user experience design. My career goal is
+                    to contribute to creating
+                    intuitive and engaging digital experiences. I have a track record of successful projects, from
+                    responsive interface design for
+                    portable devices to interactive touchscreens by the street. These projects showcase my technical
+                    skills and enthusiasm for
+                    user experience and innovation. I look forward to continuing to explore and advance the field of
+                    user experience design in my
+                    future career.
+                </p>
             </div>
         </section>
+
+        <br><br><br>
+
 
         <!-- Skills Section -->
         <section id="skills">
             <h2>Skills</h2>
-            <div class="progress-container">
-                <span class="progress-text">HTML/CSS</span>
-                <div class="progress-bar">
-                    <div class="progress" style="width: 85%;"></div>
+            <div class="skills-container">
+                <!-- 左侧内容 -->
+                <div class="skills-left">
+                    <div class="skill">
+                        <h4>UX Design</h4>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 90%;"></div>
+                    </div>
+                    <br>
+                    <div class="skill">
+                        <h4>Web Design</h4>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 80%;"></div>
+                    </div>
+                    <br>
+                    <div class="skill">
+                        <h4>Database Design</h4>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 70%;"></div>
+                    </div>
                 </div>
-            </div>
 
-            <div class="progress-container">
-                <span class="progress-text">JavaScript</span>
-                <div class="progress-bar">
-                    <div class="progress" style="width: 70%;"></div>
-                </div>
-            </div>
-
-            <div class="progress-container">
-                <span class="progress-text">User Experience Design</span>
-                <div class="progress-bar">
-                    <div class="progress" style="width: 90%;"></div>
+                <!-- 右侧内容 -->
+                <div class="skills-right">
+                    <div class="skill">
+                        <h4>UX Design</h4>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 90%;"></div>
+                    </div>
+                    <br>
+                    <div class="skill">
+                        <h4>Web Design</h4>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 80%;"></div>
+                    </div>
+                    <br>
+                    <div class="skill">
+                        <h4>Database Design</h4>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 70%;"></div>
+                    </div>
                 </div>
             </div>
         </section>
+
+
+        <br><br><br>
+
 
         <!-- Education Section -->
         <section id="education">
             <h2>Education</h2>
             <div class="education-card">
-                <p><strong>Bachelor of Science in Computer Science</strong></p>
-                <p>XYZ University, 2015 - 2019</p>
+                <div class="education-header">
+                    <h3><strong>McGill University</strong></h3>
+                    <span class="details">Master of Information Studies</span>
+                    <p>Sep 2023 - Jun 2025</p>
+                </div>
             </div>
             <div class="education-card">
-                <p><strong>Master of UX Design</strong></p>
-                <p>ABC University, 2019 - 2021</p>
+                <div class="education-header">
+                    <h3><strong>Sheridan College</strong></h3>
+                    <span class="details">Certificate in Digital Communication</span>
+                    <p>Sep 2020 - Oct 2023</p>
+                </div>
+            </div>
+            <div class="education-card">
+                <div class="education-header">
+                    <h3><strong>University of Toronto</strong></h3>
+                    <span class="details">Bachelor of Arts in Digital Enterprise Management</span>
+                    <p>Sep 2019 - Jun 2023</p>
+                </div>
             </div>
         </section>
+
+        <br><br><br>
+
 
         <!-- Work Experience Section -->
         <section id="experience">
             <h2>Work Experience</h2>
             <div class="work-experience-container">
                 <div class="work-experience-card">
-                    <h3>Junior UX Designer at ABC Corp</h3>
-                    <p>2021 - 2022</p>
-                    <p>Responsible for user research and prototyping.</p>
+                    <h3>Customer Need Analyst</h3>
+                    <p>Guochuang Software Co · Internship</p>
+                    <p>Jun 2024 - Jul 2024</p>
+                    <br>
+                    <span class="texts">Master of Information Studies</span>
                 </div>
                 <div class="work-experience-card">
-                    <h3>UX Designer at XYZ Solutions</h3>
-                    <p>2022 - 2023</p>
-                    <p>Led design for multiple client projects.</p>
+                    <h3>Administrative Assistant</h3>
+                    <p>Btrust International Trading Inc · Full-time</p>
+                    <p>Apr 2023 - Aug 2023</p>
+                    <br>
+                    <span class="texts">Master of Information Studies</span>
                 </div>
                 <div class="work-experience-card">
-                    <h3>Senior UX Designer at Creative Inc</h3>
-                    <p>2023 - Present</p>
-                    <p>Overseeing a team of designers and creating high-fidelity prototypes.</p>
+                    <h3>Customer Service</h3>
+                    <p>Btrust International Trading Inc · Full-time</p>
+                    <p>Jan 2023 - Apr 2023</p>
+                    <br>
+                    <span class="texts">Master of Information Studies</span>
                 </div>
                 <div class="work-experience-card">
-                    <h3>UX Researcher at DesignHub</h3>
-                    <p>2020 - 2021</p>
-                    <p>Conducted user interviews and usability tests.</p>
+                    <h3>Operation Management Assistant</h3>
+                    <p>7-Eleven · Internship</p>
+                    <p>Aug 2021 - Dec 2021</p>
+                    <br>
+                    <span class="texts">Master of Information Studies</span>
                 </div>
                 <div class="work-experience-card">
-                    <h3>UI/UX Intern at Web Solutions</h3>
-                    <p>2019 - 2020</p>
-                    <p>Assisted in creating design mockups and wireframes.</p>
+                    <h3>New Media and Post Editor</h3>
+                    <p>Shaanxi Broadcasting Corporation · Internship</p>
+                    <p>May 2021 - Aug 2021</p>
+                    <br>
+                    <span class="texts">Master of Information Studies</span>
                 </div>
             </div>
         </section>
+
+        <br><br><br>
 
     </div>
 
@@ -296,7 +521,7 @@
     <!-- Small text (footer) -->
     <small>© 2024 Wallis Li. All rights reserved.</small>
     <br>
-    
+
 </body>
 
 </html>
