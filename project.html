@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Wallis Li</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: "Karla", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: #333;
+        }
+
+
+        /* nav 样式 */
+        nav {
+            display: flex;
+            align-items: flex-start;
+            /* 修改为 flex-start，确保 logo 和 nav links 紧贴顶部 */
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            background-color: white;
+            z-index: 100;
+            width: 100%;
+            text-align: center;
+            overflow: hidden;
+        }
+
+
+        .logo {
+            height: 45px;
+            /* 控制 logo 的高度 */
+            filter: drop-shadow(0px 0px 12px rgba(251, 255, 0, 0.6));
+            /* 给 logo 图像添加阴影 */
+            transition: transform 0.3s ease, filter 0.3s ease;
+            /* 添加平滑过渡效果 */
+        }
+
+        .logo-link {
+            display: inline-block;
+            transition: transform 0.3s ease;
+            position: relative;
+            margin-top: 5px;
+            /* 将 top margin 设置为 0 来减少空白 */
+        }
+
+        .logo:hover {
+            transform: scale(1.2);
+            /* 放大 logo */
+        }
+
+        /* 导航链接样式 */
+
+        .nav-links {
+            margin-right: 40%;
+            padding-top: 10px;
+        }
+
+        .nav-links a {
+            display: inline-block;
+            color: #888;
+            padding: 10px 20px;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        nav a {
+            display: inline-block;
+            color: #888;
+            padding: 10px 20px;
+            text-decoration: none;
+            margin: 0 40px;
+        }
+
+        nav a.active {
+            font-weight: bold;
+            color: #333;
+            border-bottom: 3px solid #C8F136;
+        }
+
+        nav a:hover {
+            color: #C8F136;
+            transition: 0.3s;
+        }
+
+        /* 容器样式 */
+        .container {
+            width: 85%;
+            /* 容器宽度 */
+            margin: 0 auto;
+            /* 水平居中 */
+            padding-top: 10px;
+            /* 给容器顶部留出空间，避免内容被导航栏覆盖 */
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.8);
+            /* 透明背景 */
+            border-radius: 20px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+        }
+
+
+
+
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            color: #333;
+            margin-top: 30px;
+        }
+
+        h2 {
+            font-size: 2em;
+            color: #333;
+            margin: 0;
+        }
+
+        li {
+            list-style-type: none;
+            margin-bottom: 10px;
+            /* Adds space between bullet points */
+            text-align: left;
+            line-height: 30px;
+        }
+
+
+        /* Small text (footer or small notes) */
+        small {
+            font-size: 14px;
+            /* Smaller font size */
+            color: #888;
+            /* Light grey color */
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .project-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 50px auto;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 20px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+            width: 94%;
+        }
+
+        .project-card:nth-child(odd) {
+            flex-direction: row;
+        }
+
+        .project-card:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .project-image {
+            width: 300px;
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 70px;
+            margin: 60px;
+            padding: 40px;
+            background-size: cover;
+            /* 保证图片完整填充 */
+            background-position: center;
+            /* 居中对齐图片 */
+            background-repeat: no-repeat;
+            /* 禁止重复图片 */
+            flex-shrink: 0;
+            /* 防止图片被压缩 */
+        }
+
+        .project-text {
+            width: 45%;
+            text-align: left;
+            padding-right: 80px;
+            padding-left: 80px;
+        }
+
+        .project-text h2 {
+            margin-top: 0;
+            font-size: 1.8em;
+            color: #333;
+        }
+
+        .project-text p {
+            font-size: 18px;
+            color: #888;
+            margin-top: 5px;
+        }
+
+        .small-heading {
+            font-size: 18px;
+            color: #888;
+            font-weight: 400;
+        }
+    </style>
+</head>
+
+<body>
+    <br>
+    <div class="container">
+        <nav>
+            <div class="logo-link">
+                <a href="index1.html">
+                    <img src="Assets/IMG/logo.png" alt="Logo" class="logo">
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="index1.html">HOME</a>
+                <a href="project.html" class="active">PROJECTS</a>
+            </div>
+        </nav>
+
+        <br>
+
+        <!-- Project Card 1 -->
+        <div class="project-card">
+            <div class="project-image" style="background-image: url('Assets/IMG/purrpal.png');"></div>
+            <div class="project-text">
+                <h2>PurrPal <span class="small-heading">·&nbsp;&nbsp;Sales app for animal shelters</span></h2>
+                <br><br>
+                <li>PurrPal is a sales application designed for animal shelters. It helps pet lovers easily find the
+                    perfect pet by searching and matching based on price, distance, and personal preferences, allowing
+                    them to complete the adoption process online.</li>
+            </div>
+        </div>
+
+        <!-- Project Card 2 -->
+        <div class="project-card">
+            <div class="project-image" style="background-image: url('Assets/IMG/moci.jpg');"></div>
+            <div class="project-text">
+                <h2>MOCi <span class="small-heading">·&nbsp;&nbsp;Responsive trailer web for a movie theatre</span></h2>
+                <br><br>
+                <li>MOCi is a responsive web page designed for movie theatre trailers. By searching or browsing movies
+                    on the page and accessing comprehensive movie information, movie enthusiasts can find suitable films
+                    and easily navigate to the ticketing site.</li>
+            </div>
+        </div>
+
+        <!-- Project Card 3 -->
+        <div class="project-card">
+            <div class="project-image" style="background-image: url('Assets/IMG/ottobus.jpg');"></div>
+            <div class="project-text">
+                <h2>Otto Bus <span class="small-heading">·&nbsp;&nbsp;Route planning terminal at the transit
+                        station</span></h2>
+                <br><br>
+                <li>Otto Bus is a guided route inquiry and planning terminal that assists passengers in navigating
+                    public transit in Montreal. With simple operations, it offers route planning and real-time alerts,
+                    making it easy for any public transit user, especially elderly individuals with mobility challenges,
+                    to reach their destination.</li>
+            </div>
+        </div>
+
+        <!-- Project Card 4 -->
+        <div class="project-card">
+            <div class="project-image" style="background-image: url('Assets/IMG/migratecan.png');"></div>
+            <div class="project-text">
+                <h2>MigrateCAN <span class="small-heading">·&nbsp;&nbsp;Immigration pathfinder</span></h2>
+                <br><br>
+                <li>MigrateCAN is both an app and a responsive website that generates the best immigration pathway for
+                    potential immigrants based on their personal information. It helps users confirm their eligibility,
+                    assess their competitiveness, prepare for the formal application, and track real-time progress
+                    afterwards.</li>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <!-- Small text (footer) -->
+    <small>© 2024 Wallis Li. All rights reserved.</small>
+    <br>
+
+</body>
+
+</html>

@@ -19,6 +19,7 @@
             color: #333;
         }
 
+
         header {
             padding: 50px;
             text-align: center;
@@ -26,29 +27,90 @@
 
 
         nav {
-            overflow: hidden;
+            display: flex;
+            align-items: flex-start;
+            /* 修改为 flex-start，确保 logo 和 nav links 紧贴顶部 */
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            background-color: white;
+            z-index: 100;
+            width: 100%;
             text-align: center;
+            overflow: hidden;
+        }
+
+
+        .logo {
+            height: 45px;
+            /* 控制 logo 的高度 */
+            filter: drop-shadow(0px 0px 12px rgba(251, 255, 0, 0.6));
+            /* 给 logo 图像添加阴影 */
+            transition: transform 0.3s ease, filter 0.3s ease;
+            /* 添加平滑过渡效果 */
+        }
+
+        .logo-link {
+            display: inline-block;
+            transition: transform 0.3s ease;
+            position: relative;
+            margin-top: 5px;
+            /* 将 top margin 设置为 0 来减少空白 */
+        }
+
+        .logo:hover {
+            transform: scale(1.2);
+            /* 放大 logo */
+        }
+
+
+        /* 导航链接样式 */
+
+        .nav-links {
+            margin-right: 40%;
+            padding-top: 10px;
+        }
+
+        .nav-links a {
+            display: inline-block;
+            color: #888;
+            padding: 10px 20px;
+            text-decoration: none;
+            margin: 0 10px;
         }
 
         nav a {
             display: inline-block;
             color: #888;
-            padding: 14px 20px;
+            padding: 10px 20px;
             text-decoration: none;
-            margin: 0 10px;
+            margin: 0 40px;
         }
 
         nav a.active {
             font-weight: bold;
             color: #333;
-            /* 当前页面文字颜色 */
             border-bottom: 3px solid #C8F136;
-            /* 可选的底部高亮效果 */
         }
 
         nav a:hover {
             color: #C8F136;
             transition: 0.3s;
+        }
+
+        /* 容器样式 */
+        .container {
+            width: 85%;
+            /* 容器宽度 */
+            margin: 0 auto;
+            /* 水平居中 */
+            padding-top: 10px;
+            /* 给容器顶部留出空间，避免内容被导航栏覆盖 */
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.8);
+            /* 透明背景 */
+            border-radius: 20px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
         }
 
         .introduction {
@@ -99,18 +161,6 @@
         }
 
 
-        .container {
-            width: 80%;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.8);
-            /* Semi-transparent white */
-            border-radius: 20px;
-            /* Rounded corners */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            /* Subtle shadow */
-        }
-
         h1 {
             color: #333;
             font-size: 70px;
@@ -123,6 +173,18 @@
 
         p {
             color: #333;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 10px 0;
+            padding-left: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+            /* Adds space between bullet points */
+            text-align: left;
         }
 
         section {
@@ -144,11 +206,11 @@
         /* Contact Section */
         .contact-card {
             background-color: #fff;
-            padding: 15px;
-            margin: 10px;
+            padding: 20px;
+            margin: 8px;
             border-radius: 10px;
             text-align: center;
-            width: 330px;
+            width: 350px;
             display: inline-block;
             box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
         }
@@ -301,7 +363,7 @@
         .work-experience-card {
             background-color: #fff;
             padding: 30px;
-            width: 400px;
+            width: 370px;
             border-radius: 10px;
             box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
             flex-shrink: 0;
@@ -330,24 +392,33 @@
 <body>
     <br>
     <div class="container">
+
+
         <nav>
-            <a href="index1.html" class="active">HOME</a>
-            <a href="projects.html">PROJECTS</a>
+            <div class="logo-link">
+                <a href="index1.html">
+                    <img src="Assets/IMG/logo.png" alt="Logo" class="logo">
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="index1.html" class="active">HOME</a>
+                <a href="project.html">PROJECTS</a>
+            </div>
         </nav>
 
+        <br>
+
         <header>
-            <br><br>
+
             <section class="introduction">
                 <h1>
-                    Hi, I'm Wallis, a 
+                    Hi, I'm Wallis, a
                     <span class="floating-text">UX Designer</span>
                     based in Montreal, Canada
                 </h1>
-            </section>            
-            
-        </header>
+            </section>
 
-        <br>
+        </header>
 
 
         <!-- Contact Section -->
@@ -415,21 +486,21 @@
                 <!-- 右侧内容 -->
                 <div class="skills-right">
                     <div class="skill">
-                        <h4>UX Design</h4>
+                        <h4>IA Design</h4>
                     </div>
                     <div class="progress-bar">
                         <div class="progress" style="width: 90%;"></div>
                     </div>
                     <br>
                     <div class="skill">
-                        <h4>Web Design</h4>
+                        <h4>Project Management</h4>
                     </div>
                     <div class="progress-bar">
                         <div class="progress" style="width: 80%;"></div>
                     </div>
                     <br>
                     <div class="skill">
-                        <h4>Database Design</h4>
+                        <h4>Digital Curation</h4>
                     </div>
                     <div class="progress-bar">
                         <div class="progress" style="width: 70%;"></div>
@@ -473,42 +544,72 @@
 
         <!-- Work Experience Section -->
         <section id="experience">
-            <h2>Work Experience</h2>
+            <h2>Experience</h2>
             <div class="work-experience-container">
                 <div class="work-experience-card">
                     <h3>Customer Need Analyst</h3>
                     <p>Guochuang Software Co · Internship</p>
                     <p>Jun 2024 - Jul 2024</p>
                     <br>
-                    <span class="texts">Master of Information Studies</span>
+                    <span class="texts">
+                        <ul>
+                            <li>Enhanced customer satisfaction by redesigning business processes;</li>
+                            <li>Initiated service model innovations and authored patent proposals;</li>
+                            <li>Developed targeted solutions aligned with user needs and pain points.</li>
+                        </ul>
+                    </span>
                 </div>
                 <div class="work-experience-card">
                     <h3>Administrative Assistant</h3>
                     <p>Btrust International Trading Inc · Full-time</p>
                     <p>Apr 2023 - Aug 2023</p>
                     <br>
-                    <span class="texts">Master of Information Studies</span>
+                    <span class="texts">
+                        <ul>
+                            <li>Optimized working capital allocation, reimbursement processes, and payment systems;</li>
+                            <li>Streamlined onboarding, attendance tracking, and personnel management;</li>
+                            <li>Facilitated supplier negotiations and ensured accurate pricing updates.</li>
+                        </ul>
+                    </span>
                 </div>
                 <div class="work-experience-card">
                     <h3>Customer Service</h3>
                     <p>Btrust International Trading Inc · Full-time</p>
                     <p>Jan 2023 - Apr 2023</p>
                     <br>
-                    <span class="texts">Master of Information Studies</span>
+                    <span class="texts">
+                        <ul>
+                            <li>Led cashier team operations, including training, scheduling, and issue resolution;</li>
+                            <li>Delivered seamless customer support and managed complex order placements;</li>
+                            <li>Oversaw lottery operations and coordinated key service functions.</li>
+                        </ul>
+                    </span>
                 </div>
                 <div class="work-experience-card">
                     <h3>Operation Management Assistant</h3>
                     <p>7-Eleven · Internship</p>
                     <p>Aug 2021 - Dec 2021</p>
                     <br>
-                    <span class="texts">Master of Information Studies</span>
+                    <span class="texts">
+                        <ul>
+                            <li>Provided actionable insights through operational data analysis;</li>
+                            <li>Directed content strategy, ensuring precision and timely publishing;</li>
+                            <li>Strengthened brand presence across major digital platforms.</li>
+                        </ul>
+                    </span>
                 </div>
                 <div class="work-experience-card">
                     <h3>New Media and Post Editor</h3>
                     <p>Shaanxi Broadcasting Corporation · Internship</p>
                     <p>May 2021 - Aug 2021</p>
                     <br>
-                    <span class="texts">Master of Information Studies</span>
+                    <span class="texts">
+                        <ul>
+                            <li>Crafted compelling articles from field interviews, achieving high engagement;</li>
+                            <li>Produced and delivered 12 polished news video projects;</li>
+                            <li>Contributed to impactful storytelling through scripting and editing;</li>
+                        </ul>
+                    </span>
                 </div>
             </div>
         </section>
