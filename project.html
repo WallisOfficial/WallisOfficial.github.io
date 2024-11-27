@@ -21,11 +21,9 @@
         }
 
 
-        /* nav 样式 */
         nav {
             display: flex;
             align-items: flex-start;
-            /* 修改为 flex-start，确保 logo 和 nav links 紧贴顶部 */
             justify-content: space-between;
             position: sticky;
             top: 0;
@@ -39,9 +37,7 @@
 
         .logo {
             height: 45px;
-            /* 控制 logo 的高度 */
             filter: drop-shadow(0.7px 0.7px 0.3px rgba(166, 166, 166, 0.8));
-            /* 给 logo 图像添加阴影 */
         }
 
         .logo-link {
@@ -50,27 +46,20 @@
             position: relative;
             margin-top: 6px;
             margin-left: 1%;
-            /* 将 top margin 设置为 0 来减少空白 */
         }
 
         .logo:hover {
             transform: scale(1.2);
-            /* 放大 logo */
             color: #C8F136;
             transition: 0.3s;
         }
 
-        /* 导航链接样式 */
-
+        
         .nav-links {
             display: flex;
-            /* 使用 Flexbox 布局 */
             justify-content: center;
-            /* 居中对齐 */
             align-items: center;
-            /* 垂直居中 */
             flex-wrap: nowrap;
-            /* 禁止换行 */
             margin-right: 5%;
             padding-top: 18px;
         }
@@ -102,22 +91,15 @@
             transition: 0.3s;
         }
 
-        /* 容器样式 */
         .container {
             width: 85%;
-            /* 容器宽度 */
             margin: 0 auto;
-            /* 水平居中 */
             padding-top: 10px;
-            /* 给容器顶部留出空间，避免内容被导航栏覆盖 */
             padding: 10px;
             background-color: rgba(51, 51, 51, 1);
-            /* 透明背景 */
             border-radius: 20px;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
         }
-
-
 
 
         h1 {
@@ -136,18 +118,14 @@
         li {
             list-style-type: none;
             margin-bottom: 10px;
-            /* Adds space between bullet points */
             text-align: left;
             line-height: 30px;
         }
 
 
-        /* Small text (footer or small notes) */
         small {
             font-size: 14px;
-            /* Smaller font size */
             color: #BEBEBE;
-            /* Light grey color */
             display: block;
             text-align: center;
             margin-top: 20px;
@@ -182,13 +160,9 @@
             margin: 6%;
             padding: 3%;
             background-size: cover;
-            /* 保证图片完整填充 */
             background-position: center;
-            /* 居中对齐图片 */
             background-repeat: no-repeat;
-            /* 禁止重复图片 */
             flex-shrink: 0;
-            /* 防止图片被压缩 */
         }
 
         .project-text {
@@ -289,7 +263,7 @@
     </div>
 
     <br>
-    <!-- Small text (footer) -->
+    <!-- footer -->
     <small>© 2024 Wallis Li. All rights reserved.</small>
     <br>
 
