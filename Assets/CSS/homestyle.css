@@ -330,13 +330,12 @@ small {
     .details {
         margin-top: 10px; 
         margin-left: 10px;
-        padding: 0;
+        text-align: left;
     }
 
     .education-card p {
         margin-top: 10px; 
         margin-left: 10px;
-        padding: 0;
     }
 }
 
