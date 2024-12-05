@@ -324,7 +324,7 @@ small {
 @media screen and (max-width: 1000px) {
     .education-header {
         flex-direction: column;  
-        text-align: left;
+        align-items: flex-start;
     }
 
     .details {
