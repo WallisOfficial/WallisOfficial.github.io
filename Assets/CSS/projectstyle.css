@@ -1,0 +1,207 @@
+body {
+    font-family: "Karla", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    color: #fff;
+}
+
+
+nav {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    background-color: #333;
+    z-index: 100;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+
+
+.logo {
+    height: 45px;
+    filter: drop-shadow(0.7px 0.7px 0.3px rgba(166, 166, 166, 0.8));
+}
+
+.logo-link {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    position: relative;
+    margin-top: 6px;
+    margin-left: 1%;
+}
+
+.logo:hover {
+    transform: scale(1.2);
+    color: #C8F136;
+    transition: 0.3s;
+}
+
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin-right: 5%;
+    padding-top: 18px;
+}
+
+.nav-links a {
+    display: inline-block;
+    color: #BEBEBE;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+
+nav a {
+    display: inline-block;
+    color: #BEBEBE;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin: 0 40px;
+}
+
+nav a.active {
+    font-weight: bold;
+    color: #C8F136;
+}
+
+nav a:hover {
+    color: #C8F136;
+    transition: 0.3s;
+}
+
+.container {
+    width: 85%;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding: 10px;
+    background-color: rgba(51, 51, 51, 1);
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #F0F0F0;
+    margin-top: 30px;
+}
+
+h2 {
+    font-size: 2em;
+    color: #F0F0F0;
+    margin: 0;
+}
+
+li {
+    list-style-type: none;
+    margin-bottom: 10px;
+    text-align: left;
+    line-height: 30px;
+}
+
+
+small {
+    font-size: 14px;
+    color: #BEBEBE;
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.project-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 50px auto;
+    padding: 10px;
+    background-color: #333;
+    border-radius: 40px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    width: 94%;
+}
+
+.project-card:nth-child(odd) {
+    flex-direction: row;
+}
+
+.project-card:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.project-image {
+    width: 25.5%;
+    aspect-ratio: 1 / 1;
+    background-size: cover;
+    background-position: center;
+    border-radius: 70px;
+    margin: 6%;
+    padding: 3%;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
+}
+
+.project-text {
+    width: 45%;
+    text-align: left;
+    padding-right: 6%;
+    padding-left: 6%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    font-size: 17px;
+}
+
+.project-text h2 {
+    margin-top: 0;
+    font-size: 1.8em;
+    color: #F0F0F0;
+}
+
+.project-text p {
+    font-size: 18px;
+    color: #BEBEBE;
+    margin-top: 5px;
+}
+
+.small-heading {
+    font-size: 18px;
+    color: #BEBEBE;
+    font-weight: 400;
+}
+
+/* 响应式设计：确保在小屏幕上上下排列 */
+@media screen and (max-width: 1000px) {
+    .project-card {
+        display: block; /* 小屏幕上改为上下排列 */
+        align-items: center; /* 垂直方向上居中 */
+        text-align: center; /* 文本居中 */
+    }
+
+    .project-image {
+        width: 240px; /* 图片宽度变小 */
+        border-radius: 70px;
+        padding: 10px; /* 去掉内边距 */
+        object-fit: cover; /* 图片填充容器，不会被拉伸 */
+        margin: auto;
+        margin-top: 40px;
+    }
+
+    .project-text h2 {
+        margin-top: 50px;
+    }
+
+    .project-text {
+        width: 80%; /* 文本宽度调整 */
+        padding: 10px; /* 调整内边距 */
+        margin: auto;
+        margin-bottom: 20px;
+    }
+}
