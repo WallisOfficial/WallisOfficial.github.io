@@ -323,20 +323,20 @@ small {
 /* Responsive design for smaller screens */
 @media screen and (max-width: 1000px) {
     .education-header {
-        flex-direction: column;  
-        align-items: flex-start;
+        flex-direction: column;  /* 将头部内容改为垂直排列 */
+        align-items: flex-start;  /* 确保居左对齐 */
     }
 
     .details {
-        margin-top: 10px; 
-        margin-left: 10px;
-        text-align: left;
+        margin-top: 10px;
+        margin-left: 0;  /* 移除不必要的左边距 */
+        text-align: left;  /* 使文本内容左对齐 */
     }
 
     .education-card p {
-        margin-top: 10px; 
-        margin-left: 10px;
-        text-align: left;
+        margin-top: 10px;
+        margin-left: 0;  /* 移除不必要的左边距 */
+        text-align: left;  /* 使文本内容左对齐 */
     }
 }
 
