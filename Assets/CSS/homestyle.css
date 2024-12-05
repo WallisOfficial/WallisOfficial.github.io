@@ -329,13 +329,13 @@ small {
 
     .details {
         margin-top: 10px;
-        margin-left: 0;  /* 移除不必要的左边距 */
+        margin-left: 10px;  /* 移除不必要的左边距 */
         text-align: left;  /* 使文本内容左对齐 */
     }
 
     .education-card p {
         margin-top: 10px;
-        margin-left: 0;  /* 移除不必要的左边距 */
+        margin-left: 10px;  /* 移除不必要的左边距 */
         text-align: left;  /* 使文本内容左对齐 */
     }
 }
