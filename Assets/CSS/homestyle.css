@@ -195,9 +195,11 @@ small {
 
 @media screen and (max-width: 1000px) {
     .contact-card {
-        width: 90%; /* Make each card take up the full width on small screens */
-        display: block; /* Ensure cards are stacked vertically */
-        margin: 10px; /* Adjust margin for spacing between stacked cards */
+        width: 90%; 
+        display: block; 
+        margin: auto; 
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 }
 
@@ -234,7 +236,7 @@ small {
 }
 
 /* Responsive layout */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
     .about-section {
         flex-direction: column;
         align-items: center; 
@@ -249,8 +251,6 @@ small {
     }
 
 }
-
-
 
 .skills-container {
     display: flex;
@@ -323,18 +323,17 @@ small {
 /* Responsive design for smaller screens */
 @media screen and (max-width: 1000px) {
     .education-header {
-        flex-direction: column;  /* Stack the content vertically */
-        align-items: flex-start; /* Align the content to the left */
-
+        flex-direction: column;  
+        align-items: flex-start; 
     }
 
     .details {
-        margin-top: 10px; /* Add some space between the details and the title */
+        margin-top: 10px; 
         padding: 10px;
     }
 
     .education-card p {
-        margin-top: 10px; /* Add some space between the date and the rest of the content */
+        margin-top: 10px; 
         padding: 10px;
     }
 }

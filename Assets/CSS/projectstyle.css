@@ -177,19 +177,19 @@ small {
     font-weight: 400;
 }
 
-/* 响应式设计：确保在小屏幕上上下排列 */
+
 @media screen and (max-width: 1000px) {
     .project-card {
-        display: block; /* 小屏幕上改为上下排列 */
-        align-items: center; /* 垂直方向上居中 */
-        text-align: center; /* 文本居中 */
+        display: block; 
+        align-items: center; 
+        text-align: center; 
     }
 
     .project-image {
-        width: 240px; /* 图片宽度变小 */
+        width: 240px; 
         border-radius: 70px;
-        padding: 10px; /* 去掉内边距 */
-        object-fit: cover; /* 图片填充容器，不会被拉伸 */
+        padding: 10px; 
+        object-fit: cover; 
         margin: auto;
         margin-top: 40px;
     }
@@ -199,8 +199,8 @@ small {
     }
 
     .project-text {
-        width: 80%; /* 文本宽度调整 */
-        padding: 10px; /* 调整内边距 */
+        width: 80%; 
+        padding: 10px; 
         margin: auto;
         margin-bottom: 20px;
     }
